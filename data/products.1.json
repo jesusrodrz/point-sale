@@ -1,0 +1,472 @@
+{
+  "data": [
+    {
+      "id_articulo": 11,
+      "Nombre": "TRANSFORMADOR 1",
+      "codigo": "CAJHSA14141",
+      "UnidadMedida": "UND",
+      "CantidadActual": 73.79,
+      "PrecioVenta": 100.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 12,
+      "codigo": "CAJHSA1414M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 14M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 90.0,
+      "PrecioVenta": 15.0,
+      "MontoDescuento": 10.0
+    },
+    {
+      "id_articulo": 13,
+      "codigo": "CAJHSA14151",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 15",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 30.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 14,
+      "codigo": "CAJHSA1415M1",
+      "Nombre": "MEDIDOR TRIFASICO",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 15.5,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 15,
+      "codigo": "CAJHSA14161",
+      "Nombre": "DESGASIFICADOR DE ACEITE",
+      "UnidadMedida": "UND",
+      "CantidadActual": 100.0,
+      "PrecioVenta": 0.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 16,
+      "codigo": "CAJHSA1416M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 16M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 30.0,
+      "PrecioVenta": 40.0,
+      "MontoDescuento": 20.0
+    },
+    {
+      "id_articulo": 17,
+      "codigo": "CAJHSA14171",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 17",
+      "UnidadMedida": "UND",
+      "CantidadActual": 30.0,
+      "PrecioVenta": 40.0,
+      "MontoDescuento": 20.0
+    },
+    {
+      "id_articulo": 18,
+      "codigo": "CAJHSA1417M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 17M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 0.0,
+      "PrecioVenta": 0.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 19,
+      "codigo": "CAJHSA14181",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 18",
+      "UnidadMedida": "UND",
+      "CantidadActual": 200.0,
+      "PrecioVenta": 60.0,
+      "MontoDescuento": 40.0
+    },
+    {
+      "id_articulo": 110,
+      "codigo": "CAJHSA1418M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 18M",
+      "UnidadMedida": "KG",
+      "CantidadActual": 10.2,
+      "PrecioVenta": 20.1,
+      "MontoDescuento": 10.0
+    },
+    {
+      "id_articulo": 111,
+      "codigo": "CAJHSA25141",
+      "Nombre": "CAMISA JHON HOLDEN LILA 14",
+      "UnidadMedida": "MT",
+      "CantidadActual": 5.2,
+      "PrecioVenta": 0.5,
+      "MontoDescuento": 0.2
+    },
+    {
+      "id_articulo": 112,
+      "codigo": "CAJHSA2514M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 14M",
+      "UnidadMedida": "KG",
+      "CantidadActual": 30.05,
+      "PrecioVenta": 7.1,
+      "MontoDescuento": 5.2
+    },
+    {
+      "id_articulo": 113,
+      "codigo": "CAJHSA25151",
+      "Nombre": "CAMISA JHON HOLDEN LILA 15",
+      "UnidadMedida": "KG",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 7.2,
+      "MontoDescuento": 6.2
+    },
+    {
+      "id_articulo": 114,
+      "codigo": "CAJHSA2515M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 15M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 7.2,
+      "MontoDescuento": 6.2
+    },
+    {
+      "id_articulo": 115,
+      "codigo": "CAJHSA25161",
+      "Nombre": "CAMISA JHON HOLDEN LILA 16",
+      "UnidadMedida": "UND",
+      "CantidadActual": 60.0,
+      "PrecioVenta": 10.5,
+      "MontoDescuento": 5.0
+    },
+    {
+      "id_articulo": 116,
+      "codigo": "CAJHSA2516M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 16M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 150.0,
+      "PrecioVenta": 90.0,
+      "MontoDescuento": 60.0
+    },
+    {
+      "id_articulo": 117,
+      "codigo": "CAJHSA25171",
+      "Nombre": "CAMISA JHON HOLDEN LILA 17",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 0.3,
+      "MontoDescuento": 0.1
+    },
+    {
+      "id_articulo": 118,
+      "codigo": "CAJHSA2517M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 17M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 80.0,
+      "PrecioVenta": 60.0,
+      "MontoDescuento": 40.0
+    },
+    {
+      "id_articulo": 119,
+      "codigo": "CAJHSA25181",
+      "Nombre": "CAMISA JHON HOLDEN LILA 18",
+      "UnidadMedida": "UND",
+      "CantidadActual": 250.0,
+      "PrecioVenta": 30.0,
+      "MontoDescuento": 20.0
+    },
+    {
+      "id_articulo": 120,
+      "codigo": "CAJHSA2518M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 18M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 40.0,
+      "PrecioVenta": 5.0,
+      "MontoDescuento": 3.0
+    },
+    {
+      "id_articulo": 121,
+      "codigo": "CAJHSA28141",
+      "Nombre": "CAMISA JHON HOLDEN MARFIL 14",
+      "UnidadMedida": "UND",
+      "CantidadActual": 80.0,
+      "PrecioVenta": 50.0,
+      "MontoDescuento": 30.0
+    },
+    {
+      "id_articulo": 132,
+      "codigo": "CAJHSA1114M1",
+      "Nombre": "CAMISA JHON HOLDEN BLANCO 14M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 150.0,
+      "PrecioVenta": 20.0,
+      "MontoDescuento": 10.0
+    },
+    {
+      "id_articulo": 137,
+      "codigo": "CAJHSA11171",
+      "Nombre": "CAMISA JHON HOLDEN BLANCO 17",
+      "UnidadMedida": "UND",
+      "CantidadActual": 600.0,
+      "PrecioVenta": 40.0,
+      "MontoDescuento": 30.0
+    },
+    {
+      "id_articulo": 145,
+      "codigo": "CAJHSA31161",
+      "Nombre": "CAMISA JHON HOLDEN NEGRO 16",
+      "UnidadMedida": "UND",
+      "CantidadActual": 400.0,
+      "PrecioVenta": 0.8,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 149,
+      "codigo": "CAJHSA31181",
+      "Nombre": "CAMISA JHON HOLDEN NEGRO 18",
+      "UnidadMedida": "UND",
+      "CantidadActual": 0.0,
+      "PrecioVenta": 0.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 150,
+      "codigo": "CAJHSA3118M1",
+      "Nombre": "CAMISA JHON HOLDEN NEGRO 18M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 900.0,
+      "PrecioVenta": 30.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 11,
+      "Nombre": "TRANSFORMADOR",
+      "codigo": "CAJHSA14141",
+      "UnidadMedida": "UND",
+      "CantidadActual": 73.79,
+      "PrecioVenta": 15.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 12,
+      "codigo": "CAJHSA1414M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 14M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 90.0,
+      "PrecioVenta": 15.0,
+      "MontoDescuento": 10.0
+    },
+    {
+      "id_articulo": 13,
+      "codigo": "CAJHSA14151",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 15",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 30.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 14,
+      "codigo": "CAJHSA1415M1",
+      "Nombre": "MEDIDOR TRIFASICO",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 15.5,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 15,
+      "codigo": "CAJHSA14161",
+      "Nombre": "DESGASIFICADOR DE ACEITE",
+      "UnidadMedida": "UND",
+      "CantidadActual": 100.0,
+      "PrecioVenta": 0.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 16,
+      "codigo": "CAJHSA1416M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 16M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 30.0,
+      "PrecioVenta": 40.0,
+      "MontoDescuento": 20.0
+    },
+    {
+      "id_articulo": 17,
+      "codigo": "CAJHSA14171",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 17",
+      "UnidadMedida": "UND",
+      "CantidadActual": 30.0,
+      "PrecioVenta": 40.0,
+      "MontoDescuento": 20.0
+    },
+    {
+      "id_articulo": 18,
+      "codigo": "CAJHSA1417M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 17M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 0.0,
+      "PrecioVenta": 0.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 19,
+      "codigo": "CAJHSA14181",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 18",
+      "UnidadMedida": "UND",
+      "CantidadActual": 200.0,
+      "PrecioVenta": 60.0,
+      "MontoDescuento": 40.0
+    },
+    {
+      "id_articulo": 110,
+      "codigo": "CAJHSA1418M1",
+      "Nombre": "CAMISA JHON HOLDEN CELESTE CLARO 18M",
+      "UnidadMedida": "KG",
+      "CantidadActual": 10.2,
+      "PrecioVenta": 20.1,
+      "MontoDescuento": 10.0
+    },
+    {
+      "id_articulo": 111,
+      "codigo": "CAJHSA25141",
+      "Nombre": "CAMISA JHON HOLDEN LILA 14",
+      "UnidadMedida": "MT",
+      "CantidadActual": 5.2,
+      "PrecioVenta": 0.5,
+      "MontoDescuento": 0.2
+    },
+    {
+      "id_articulo": 112,
+      "codigo": "CAJHSA2514M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 14M",
+      "UnidadMedida": "KG",
+      "CantidadActual": 30.05,
+      "PrecioVenta": 7.1,
+      "MontoDescuento": 5.2
+    },
+    {
+      "id_articulo": 113,
+      "codigo": "CAJHSA25151",
+      "Nombre": "CAMISA JHON HOLDEN LILA 15",
+      "UnidadMedida": "KG",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 7.2,
+      "MontoDescuento": 6.2
+    },
+    {
+      "id_articulo": 114,
+      "codigo": "CAJHSA2515M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 15M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 7.2,
+      "MontoDescuento": 6.2
+    },
+    {
+      "id_articulo": 115,
+      "codigo": "CAJHSA25161",
+      "Nombre": "CAMISA JHON HOLDEN LILA 16",
+      "UnidadMedida": "UND",
+      "CantidadActual": 60.0,
+      "PrecioVenta": 10.5,
+      "MontoDescuento": 5.0
+    },
+    {
+      "id_articulo": 116,
+      "codigo": "CAJHSA2516M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 16M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 150.0,
+      "PrecioVenta": 90.0,
+      "MontoDescuento": 60.0
+    },
+    {
+      "id_articulo": 117,
+      "codigo": "CAJHSA25171",
+      "Nombre": "CAMISA JHON HOLDEN LILA 17",
+      "UnidadMedida": "UND",
+      "CantidadActual": 50.0,
+      "PrecioVenta": 0.3,
+      "MontoDescuento": 0.1
+    },
+    {
+      "id_articulo": 118,
+      "codigo": "CAJHSA2517M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 17M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 80.0,
+      "PrecioVenta": 60.0,
+      "MontoDescuento": 40.0
+    },
+    {
+      "id_articulo": 119,
+      "codigo": "CAJHSA25181",
+      "Nombre": "CAMISA JHON HOLDEN LILA 18",
+      "UnidadMedida": "UND",
+      "CantidadActual": 250.0,
+      "PrecioVenta": 30.0,
+      "MontoDescuento": 20.0
+    },
+    {
+      "id_articulo": 120,
+      "codigo": "CAJHSA2518M1",
+      "Nombre": "CAMISA JHON HOLDEN LILA 18M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 40.0,
+      "PrecioVenta": 5.0,
+      "MontoDescuento": 3.0
+    },
+    {
+      "id_articulo": 121,
+      "codigo": "CAJHSA28141",
+      "Nombre": "CAMISA JHON HOLDEN MARFIL 14",
+      "UnidadMedida": "UND",
+      "CantidadActual": 80.0,
+      "PrecioVenta": 50.0,
+      "MontoDescuento": 30.0
+    },
+    {
+      "id_articulo": 132,
+      "codigo": "CAJHSA1114M1",
+      "Nombre": "CAMISA JHON HOLDEN BLANCO 14M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 150.0,
+      "PrecioVenta": 20.0,
+      "MontoDescuento": 10.0
+    },
+    {
+      "id_articulo": 137,
+      "codigo": "CAJHSA11171",
+      "Nombre": "CAMISA JHON HOLDEN BLANCO 17",
+      "UnidadMedida": "UND",
+      "CantidadActual": 600.0,
+      "PrecioVenta": 40.0,
+      "MontoDescuento": 30.0
+    },
+    {
+      "id_articulo": 145,
+      "codigo": "CAJHSA31161",
+      "Nombre": "CAMISA JHON HOLDEN NEGRO 16",
+      "UnidadMedida": "UND",
+      "CantidadActual": 400.0,
+      "PrecioVenta": 0.8,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 149,
+      "codigo": "CAJHSA31181",
+      "Nombre": "CAMISA JHON HOLDEN NEGRO 18",
+      "UnidadMedida": "UND",
+      "CantidadActual": 0.0,
+      "PrecioVenta": 0.0,
+      "MontoDescuento": 0.0
+    },
+    {
+      "id_articulo": 150,
+      "codigo": "CAJHSA3118M1",
+      "Nombre": "CAMISA JHON HOLDEN NEGRO 18M",
+      "UnidadMedida": "UND",
+      "CantidadActual": 900.0,
+      "PrecioVenta": 30.0,
+      "MontoDescuento": 0.0
+    }
+  ]
+}

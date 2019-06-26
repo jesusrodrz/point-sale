@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>PRINT PDF EXAMPLE</title>
+  </head>
+  <body>
+    <button class="action-btn" onclick="printTable()">Print the table</button>
+    <div id="print_area">
+      <style>
+        body {
+          margin: 30px;
+          text-align: center;
+        }
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        td,
+        th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        .print-area {
+          margin: 0 auto;
+          width: 80%;
+        }
+        .action-btn {
+          background-color: #dddddd;
+          color: #000;
+          border: none;
+          padding: 12px 14px;
+          margin: 20px auto;
+          cursor: pointer;
+        }
+      </style>
+      <div class="print-area">
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Unidad</th>
+            <th>Precio(USD)</th>
+          </tr>
+          <tr>
+            <td>Chocolate</td>
+            <td>3</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Cookies</td>
+            <td>2</td>
+            <td>10</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function printTable() {
+        var tableData = document.getElementById('print_area').innerHTML
+        var styleData = document.getElementsByTagName('style')[0].innerHTML
+        var printWindow = window.open('', '', 'width=600, height=600')
+        // var printWindow = window.open('', '')
+
+        printWindow.document.write(
+          '<style>' + styleData + '<\/style>' + tableData
+        )
+        printWindow.document.close()
+        // printWindow.focus()
+        printWindow.print()
+        printWindow.close()
+
+        return true
+      }
+    </script>
+  </body>
+</html>

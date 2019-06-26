@@ -1,0 +1,22 @@
+@mixin start-end($start,$end){
+  @if map-has-key($breakpoints,$start) and map-has-key($breakpoints,$end){
+    @media screen and (min-width: map-get($breakpoints,$start)) and (max-width: map-get($breakpoints,$end) - 1){
+      @content;
+    }
+  }
+  @else if map-has-key($breakpoints,$start) and not map-has-key($breakpoints,$end){
+    @media screen and (min-width: map-get($breakpoints,$start)) and (max-width: $end) {
+      @content;
+    }
+  }
+  @else if not map-has-key($breakpoints,$start) and map-has-key($breakpoints,$end) {
+    @media screen and (min-width: $start) and (max-width: map-get($breakpoints,$end) - 1){
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: $start) and (max-width: $end){
+      @content;
+    }
+  }
+}

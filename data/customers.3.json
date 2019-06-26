@@ -1,0 +1,432 @@
+{
+  "data": [
+    {
+      "id_persona": 79,
+      "nro_documento": "20544027167",
+      "razon_social": "cliente 3",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 72,
+      "nro_documento": "20428698569",
+      "razon_social": "AMERICATEL PERU S.A.",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 17,
+      "nro_documento": "3211111111",
+      "razon_social": "ARTE TEXTIL LATINO",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 16,
+      "nro_documento": "311111111",
+      "razon_social": "ATAVIAR SRL",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 27,
+      "nro_documento": "6221111111",
+      "razon_social": "CALIMOD",
+      "telefono_movil": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 19,
+      "nro_documento": "3411111111",
+      "razon_social": "CALZATURA ITALIANA SAC",
+      "telefono_fijo": "",
+      "email": "",
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 18,
+      "nro_documento": "3411111111",
+      "razon_social": "CARLOS SANCHES",
+      "telefono_fijo": "",
+      "email": "",
+      "NacionalidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 66,
+      "nro_documento": "20100246172",
+      "razon_social": "CEYESA INGENIERIA ELECTRICA S.A.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 57,
+      "nro_documento": "20602377564",
+      "razon_social": "CONSTRUCTORA MARCO ANTONIO & SERVICIOS GENERALES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 65,
+      "nro_documento": "20393534746",
+      "razon_social": "MARCO ANDRE MAQUINARIAS Y CONSTRUCCIONES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 79,
+      "nro_documento": "20544027167",
+      "razon_social": "3A Engenieering & Construction SAC",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 72,
+      "nro_documento": "20428698569",
+      "razon_social": "AMERICATEL PERU S.A.",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 17,
+      "nro_documento": "3211111111",
+      "razon_social": "ARTE TEXTIL LATINO",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 16,
+      "nro_documento": "311111111",
+      "razon_social": "ATAVIAR SRL",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 27,
+      "nro_documento": "6221111111",
+      "razon_social": "CALIMOD",
+      "telefono_movil": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 19,
+      "nro_documento": "3411111111",
+      "razon_social": "CALZATURA ITALIANA SAC",
+      "telefono_fijo": "",
+      "email": "",
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 18,
+      "nro_documento": "3411111111",
+      "razon_social": "CARLOS SANCHES",
+      "telefono_fijo": "",
+      "email": "",
+      "NacionalidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 66,
+      "nro_documento": "20100246172",
+      "razon_social": "CEYESA INGENIERIA ELECTRICA S.A.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 57,
+      "nro_documento": "20602377564",
+      "razon_social": "CONSTRUCTORA MARCO ANTONIO & SERVICIOS GENERALES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 65,
+      "nro_documento": "20393534746",
+      "razon_social": "MARCO ANDRE MAQUINARIAS Y CONSTRUCCIONES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 79,
+      "nro_documento": "20544027167",
+      "razon_social": "3A Engenieering & Construction SAC",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 72,
+      "nro_documento": "20428698569",
+      "razon_social": "AMERICATEL PERU S.A.",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 17,
+      "nro_documento": "3211111111",
+      "razon_social": "ARTE TEXTIL LATINO",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 16,
+      "nro_documento": "311111111",
+      "razon_social": "ATAVIAR SRL",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 27,
+      "nro_documento": "6221111111",
+      "razon_social": "CALIMOD",
+      "telefono_movil": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 19,
+      "nro_documento": "3411111111",
+      "razon_social": "CALZATURA ITALIANA SAC",
+      "telefono_fijo": "",
+      "email": "",
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 18,
+      "nro_documento": "3411111111",
+      "razon_social": "CARLOS SANCHES",
+      "telefono_fijo": "",
+      "email": "",
+      "NacionalidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 66,
+      "nro_documento": "20100246172",
+      "razon_social": "CEYESA INGENIERIA ELECTRICA S.A.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 57,
+      "nro_documento": "20602377564",
+      "razon_social": "CONSTRUCTORA MARCO ANTONIO & SERVICIOS GENERALES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 65,
+      "nro_documento": "20393534746",
+      "razon_social": "MARCO ANDRE MAQUINARIAS Y CONSTRUCCIONES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 79,
+      "nro_documento": "20544027167",
+      "razon_social": "3A Engenieering & Construction SAC",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 72,
+      "nro_documento": "20428698569",
+      "razon_social": "AMERICATEL PERU S.A.",
+      "nombre_comercial": null,
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 17,
+      "nro_documento": "3211111111",
+      "razon_social": "ARTE TEXTIL LATINO",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 16,
+      "nro_documento": "311111111",
+      "razon_social": "ATAVIAR SRL",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 27,
+      "nro_documento": "6221111111",
+      "razon_social": "CALIMOD",
+      "telefono_movil": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 19,
+      "nro_documento": "3411111111",
+      "razon_social": "CALZATURA ITALIANA SAC",
+      "telefono_fijo": "",
+      "email": "",
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 18,
+      "nro_documento": "3411111111",
+      "razon_social": "CARLOS SANCHES",
+      "telefono_fijo": "",
+      "email": "",
+      "NacionalidadDes": null,
+      "GrupoPersona": "PROVEEDOR,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 66,
+      "nro_documento": "20100246172",
+      "razon_social": "CEYESA INGENIERIA ELECTRICA S.A.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "NombreCompleto": null,
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 57,
+      "nro_documento": "20602377564",
+      "razon_social": "CONSTRUCTORA MARCO ANTONIO & SERVICIOS GENERALES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    },
+    {
+      "id_persona": 65,
+      "nro_documento": "20393534746",
+      "razon_social": "MARCO ANDRE MAQUINARIAS Y CONSTRUCCIONES E.I.R.L.",
+      "telefono_fijo": "",
+      "email": "",
+      "TipoDocIdentidadDes": null,
+      "GrupoPersona": "CLIENTE,",
+      "PersonaDireccionPrincipal": null
+    }
+  ]
+}

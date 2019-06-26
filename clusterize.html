@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<!--
+  This is a starter template page. Use this page to start your new project from
+  scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <meta name="description" content="Dashboard CubeFast" />
+    <meta name="author" content="Future Imagick" />
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../plugins/images/favicon.png"
+    />
+    <title>CubeFast ERP | Postnet Venta</title>
+    <!-- bootstrap-->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"
+    ></script>
+    <link
+      href="cube-fast/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bulma and fontawesome -->
+    <!-- <link rel="stylesheet" href="cube-fast/css/icons/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="cube-fast/css/bulma.min.css" />
+    <!-- animation CSS -->
+    <link href="cube-fast/css/animate.css" rel="stylesheet" />
+    <!-- custom CSS -->
+    <link href="cube-fast/css/style.css" rel="stylesheet" />
+    <!-- color CSS -->
+    <link href="cube-fast/css/colors/default.css" id="theme" rel="stylesheet" />
+    <!--Custom CubeFast CSS-->
+    <link href="cube-fast/css/cubefastmaster.css" rel="stylesheet" />
+    <!--Clusterize CSS-->
+    <link href="cube-fast/css/clusterize.css" rel="stylesheet" />
+    <!--    Sweet Alert 2 -->
+    <script src="plugins/sweetalert/sweetalert2.all.js"></script>
+    <link rel="stylesheet" href="plugins/sweetalert/sweetalert2.min.css" />
+
+    <!-- Boostrap Validator CSS -->
+    <link rel="stylesheet" href="/plugins/bower_components/bootstrapvalidator-0.5.2/dist/css/bootstrapValidator.min.css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //[if lt IE 9]>
+    /* <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] */ -->
+    <!-- <script>
+      var nodos_a_eliminar = new Array();
+          function buscar() {
+              var elementos = document.getElementsByTagName('*');
+              for (var k = 0; k < elementos.length; k++) {
+                  for (var i = 0; i < elementos[k].childNodes.length; i++) {
+                      var hijo = elementos[k].childNodes[i];
+                      if ((hijo.nodeType == 3 && !/\S/.test(hijo.nodeValue)) || (hijo.nodeType == 8)) {
+                          nodos_a_eliminar[nodos_a_eliminar.length] = hijo;
+                      }
+                  }
+              }
+              destruir();
+          }
+  
+          function destruir() {
+              for (var d = 0; d < nodos_a_eliminar.length; d++) {
+                  nodos_a_eliminar[d].parentNode.removeChild(nodos_a_eliminar[d]);
+              }
+          }
+          function iniciar() {
+              buscar();
+          }
+  
+          window.onload = iniciar; 
+      </script> -->
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <svg class="circular" viewBox="25 25 50 50">
+        <circle
+          class="path"
+          cx="50"
+          cy="50"
+          r="20"
+          fill="none"
+          stroke-width="2"
+          stroke-miterlimit="10"
+        />
+      </svg>
+    </div>
+    <div id="wrapper">
+      <!-- Topbar header - style you can find in pages.scss -->
+      <nav class="navbar navbar-default navbar-static-top m-b-0">
+        <div class="navbar-header">
+          <div class="top-left-part">
+            <!-- Logo -->
+            <a class="logo" href="/Ventas/Inicio/main">
+              <!-- Logo icon image, you can use font-icon also -->
+              <b>
+                <!--This is dark logo icon-->
+                <img
+                  Alt="home"
+                  Src="plugins/images/admin-logo-dark.png"
+                  class="light-logo"
+                />
+              </b>
+              <!-- Logo text image you can use text also -->
+              <span class="hidden-xs">
+                <!--This is dark logo text-->
+                <img
+                  Alt="home"
+                  Src="plugins/images/admin-text-dark.png"
+                  class="light-logo"
+                />
+              </span>
+            </a>
+          </div>
+          <!-- End Logo -->
+          <!-- ======== -->
+          <!--Menu Header-->
+          <!-- Toggle Icon Menu -->
+          <ul class="nav navbar-top-links navbar-left">
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="open-close waves-effect waves-light"
+                ><i class="ti-menu"></i
+              ></a>
+            </li>
+          </ul>
+          <!-- End Toggle Icon Menu -->
+          <!-- Menu User-->
+          <ul class="nav navbar-top-links navbar-right pull-right">
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle profile-pic"
+                data-toggle="dropdown"
+                href="#"
+              >
+                <img
+                  Alt="Usuario"
+                  Src="plugins/images/users/varun.jpg"
+                  class="img-circle"
+                  width="36"
+                />
+                <b class="hidden-xs"></b><span class="caret"></span>
+              </a>
+              <!-- Dropdown-User-->
+              <ul class="dropdown-menu dropdown-user animated flipInY">
+                <li>
+                  <div class="dw-user-box">
+                    <div class="u-img">
+                      <img Alt="Usuario" Src="plugins/images/users/varun.jpg" />
+                    </div>
+                    <div class="u-text">
+                      <h4></h4>
+                      <p class="text-muted"></p>
+                      <a
+                        href="/Ventas/Usuario/Perfil?id=0"
+                        class="btn btn-rounded btn-danger btn-sm"
+                        >Ver Perfil</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="/Ventas/Usuario/Perfil?id=0"
+                    ><i class="ti-user"></i> My Perfil</a
+                  >
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="/Ventas/Usuario/PerfilContrasena?id=0"
+                    ><i class="ti-settings"></i> Configuración de Cuenta</a
+                  >
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="/Ventas/Inicio/Logout"
+                    ><i class="fa fa-power-off"></i> Salir</a
+                  >
+                </li>
+              </ul>
+              <!--/.dropdown-user -->
+            </li>
+          </ul>
+          <!-- End-User -->
+        </div>
+        <!-- /.navbar-header -->
+        <!-- /.navbar-top-links -->
+        <!-- /.navbar-static-side -->
+      </nav>
+    </div>
+    <main class="Page-container" id="pointSaleContainer" data-impuesto="0.18">
+      <article class="Wrapper Wrapper--products active">
+        <section class="Wrapper-left">
+          <article class="List">
+            <h1 class="List-title has-text-dark">Lista de productos</h1>
+            <article class="List-message">
+              <span class="icon is-large">
+                <i class="mdi cb-icon mdi-cart"></i>
+              </span>
+              <p>Tu carrito esta vacio</p>
+            </article>
+            <article class="List-items"></article>
+          </article>
+          <article class="Edit">
+            <div class="Edit-customer">
+              <button value="client" class="button js-button-customer">
+                <span class="icon is-small u-icon">
+                  <i class="mdi mdi-contacts"></i>
+                </span>
+                <span class="js-button-custome-text">Cliente</span>
+              </button>
+            </div>
+            <div class="Edit-payment">
+              <button value="payment" class="button js-button-payment">
+                <span class="icon is-small u-icon">
+                  <i class="mdi cb-icon mdi-cash-multiple"></i>
+                </span>
+                <span class="name">Pagar</span>
+              </button>
+            </div>
+            <div class="Edit-one">
+              <button value="1" class="button js-button-num">1</button>
+            </div>
+            <div class="Edit-two">
+              <button value="2" class="button js-button-num">2</button>
+            </div>
+            <div class="Edit-three">
+              <button value="3" class="button js-button-num">3</button>
+            </div>
+            <div class="Edit-four">
+              <button value="4" class="button js-button-num">4</button>
+            </div>
+            <div class="Edit-five">
+              <button value="5" class="button js-button-num">5</button>
+            </div>
+            <div class="Edit-six">
+              <button value="6" class="button js-button-num">6</button>
+            </div>
+            <div class="Edit-seven">
+              <button value="7" class="button js-button-num">7</button>
+            </div>
+            <div class="Edit-eight">
+              <button value="8" class="button js-button-num">8</button>
+            </div>
+            <div class="Edit-nine">
+              <button value="9" class="button js-button-num">9</button>
+            </div>
+            <div class="Edit-zero">
+              <button value="0" class="button js-button-num">0</button>
+            </div>
+            <div class="Edit-off">
+              <button value="discount" class="button js-button-edit">
+                <span class="icon">
+                  <i class="mdi mdi-tag"></i>
+                </span>
+              </button>
+            </div>
+            <div class="Edit-unit">
+              <button value="unit" class="button js-button-edit">
+                <span class="icon">
+                  <i class="mdi mdi-cart-plus"></i>
+                </span>
+              </button>
+            </div>
+            <div class="Edit-price">
+              <button value="price" class="button js-button-edit">
+                <span class="icon">
+                  <i class="mdi mdi-cash-usd"></i>
+                </span>
+              </button>
+            </div>
+            <div class="Edit-delete">
+              <button value="delete" class="button js-button-delete">
+                <span class="icon">
+                  <i class="mdi mdi-backspace"></i>
+                </span>
+              </button>
+            </div>
+            <div class="Edit-point">
+              <button value="." class="button js-button-num">.</button>
+            </div>
+          </article>
+        </section>
+        <section class="Wrapper-right">
+          <section class="Bar-code">
+            <input
+              class="input search__input js-bar-code-input"
+              type="text"
+              placeholder="Buscar producto"
+            />  
+            <button class="button Bar-code__button js-bar-code-btn">
+              <i class="mdi mdi-magnify"></i> Lector
+            </button>
+          </section>
+          <section class="Search search">
+            <input
+              class="input search__input js-search-products"
+              type="text"
+              placeholder="Buscar producto"
+            />  
+            <button class="search__button is-left js-btn-products">
+              <i class="mdi mdi-magnify"></i>
+            </button>
+          </section>
+
+          <article id="products" class="clusterize-scroll Products-wrapper" >
+            <div class="clusterize-content" id="contentArea"></div>
+          </article>
+        </section>
+      </article>
+      <article class="Wrapper Wrapper--customers">
+        <header class="customers-topbar">
+          <button class="button is-large button--back js-button-customers-back">
+            Volver
+          </button>
+          <section class="customers-topbar__search search">
+            <input
+              class="input search__input js-search-customers"
+              type="text"
+              placeholder="Buscar cliente"
+            />
+            <button class="search__button is-left js-btn-customers">
+              <i class="mdi cb-icon mdi-magnify"></i>
+            </button>
+          </section>
+          <section class="customers-topbar__buttons">
+            <button class="button is-large button--add js-button-customers-add">
+              <i class="mdi cb-icon mdi-account-plus"></i>
+            </button>
+            <button
+              class="button is-large cb-icon is-danger button--set js-button-customers-deselect"
+            >
+              Deseleccionar cliente
+            </button>
+          </section>
+        </header>
+        <section class="customers">
+          <form action="" class="customers__form">
+            <!-- <h2 class="customers-form-"></h2> -->
+            <div class="form-group customers__input">
+              <input
+                type="text"
+                class="form-control input js-input-name"
+                placeholder="Nombre/Razón social"
+                name="razon_social"
+              />
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="text"
+                class="form-control input js-input-id"
+                placeholder="DNI/RUC"
+                name="nro_documento"
+              />
+            </div>
+            <div class="form-group customers__input select">
+              <select class="select form-control js-input-type" name="tipoSocio" id="">
+                <option disabled selected>Tipo de socio</option>
+                <option value="Natural">Natural</option>
+                <option value="Juridico">Juridico</option>
+              </select>
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="tel"
+                class="form-control input js-input-tel"
+                placeholder="Telefono"
+                name="nro_telefono"
+              />
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="email"
+                class="form-control input js-input-email"
+                placeholder="Email"
+                name="email"
+              />
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="text"
+                class="form-control input js-input-direccion"
+                placeholder="Direción"
+                name="direccion"
+              />
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="text"
+                class="form-control input js-input-distrito"
+                placeholder="Distrito"
+              />
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="text"
+                class="form-control input js-input-provicia"
+                placeholder="Provicia"
+              />
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="text"
+                class="form-control input js-input-departamento"
+                placeholder="Departamento"
+              />
+            </div>
+            <div class="form-group customers__input">
+              <input
+                type="text"
+                class="form-control input js-input-ubigeo"
+                placeholder="Ubigeo"
+              />
+            </div>
+            <section class="customers__buttons">
+              <button type="submit"
+                class="button is-success customers__button customers__button--save"
+              >
+                <i class="mdi mdi-content-save"></i>
+              </button>
+              <button
+                class="button is-danger cb-icon is-outlined customers__button customers__button--close"
+              >
+                <i class="mdi cb-icon mdi-close"></i>
+              </button>
+            </section>
+          </form>
+          <!-- <section class="customers__panel"><p>nombre</p></section> -->
+        </section>
+        <section id="tableCustomers"  class="customers-table  customers-tb clusterize-scroll">
+          <table class="table is-striped is-narrow">
+            <thead>
+              <tr>
+                <th>RUC/DNI</th>
+                <th>Nombre/Razón social</th>
+                <th>Tipo socio</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id="contentAreaCustomer" class="clusterize-content" >
+            </tbody>
+          </table>
+        </section>
+      </article>
+      <article class="Wrapper Wrapper--payment Payments">
+        <header class="customers-topbar Payments__header">
+          <button class="button is-large button--back js-button-customers-back">
+            Volver
+          </button>
+          <section class="customers-topbar__search search">
+            <h2 class="Payments__title">Pago</h2>
+          </section>
+          <section class="customers-topbar__buttons payment-topbar__buttons">
+            <button disabled class="button is-large js-valid-btn">
+              Procesar
+            </button>
+          </section>
+        </header>
+        <section class="Payments__methods Methods">
+          <button class="button is-medium Methods__button js-methods-button">
+            Efectivo
+          </button>
+          <button class="button is-medium Methods__button js-methods-button">
+            Débito
+          </button>
+          <button class="button is-medium Methods__button js-methods-button">
+            Crédito
+          </button>
+        </section>
+        <section class="Payments__payment Payment">
+          <section class="Payment__price">
+            <div class="Payment__sign Payment__tab active">
+              <h2 class="Payment__title">
+                $<span class="js-payment-sing">0.00</span>
+              </h2>
+              <p class="Payment__text">
+                Por favor selecciona el método de pago
+              </p>
+            </div>
+            <div class="Payment__methods Payment__tab">
+              <table class="payment-table table is-fullwidth is-hoverable">
+                <thead>
+                  <tr>
+                    <th>Deuda</th>
+                    <th>Aporte</th>
+                    <th>Cambio</th>
+                    <th>Método</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <!-- <tr class="is-selected js-method">
+                    <td>Deuda</td>
+                    <td class="Payment__tendered">Aporte</td>
+                    <td>Cambio</td>
+                    <td>Método</td>
+                    <td>
+                      <button
+                        class="button danger is-small is-close js-method-del"
+                      >
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </td>
+                  </tr> -->
+                </tbody>
+                <tfoot class="hidden">
+                  <tr>
+                    <td class="due"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
+          <section class="Payment__calculator">
+            <button
+              value="1"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              1
+            </button>
+            <button
+              value="2"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              2
+            </button>
+            <button
+              value="3"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              3
+            </button>
+            <button
+              value="4"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              4
+            </button>
+            <button
+              value="5"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              5
+            </button>
+            <button
+              value="6"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              6
+            </button>
+            <button
+              value="7"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              7
+            </button>
+            <button
+              value="8"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              8
+            </button>
+            <button
+              value="9"
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              9
+            </button>
+            <button
+              value="."
+              class="button primary Payment__calc-btn js-calculator-num"
+            >
+              .
+            </button>
+            <button
+              value="0"
+              class="button primary Payment__calc-btn  js-calculator-num"
+            >
+              0
+            </button>
+            <button
+              value="delete"
+              class="button primary Payment__calc-btn js-calculator-delete"
+            >
+              <span class="icon">
+                <i class="mdi mdi-backspace"></i>
+              </span>
+            </button>
+          </section>
+          <section class="Payment__button">
+            <button
+              value="client"
+              class="button primary Payment__customer-button js-button-customer-2"
+            >
+              <span class="icon  u-icon">
+                <i class="mdi mdi-contacts"></i>
+              </span>
+              <span class="js-button-custome-text-2">Cliente</span>
+            </button>
+            <br />
+            <button
+              value="factura"
+              class="button primary Payment__customer-button js-ticket-type"
+            >
+              <span class="">Factura</span>
+            </button>
+            <br />
+            <button
+              value="boleta"
+              class="button primary Payment__customer-button js-ticket-type"
+            >
+              <span class="">Boleta</span>
+            </button>
+            <br />
+            <button
+              value="ticket"
+              class="button primary Payment__customer-button js-ticket-type"
+            >
+              <span class="">Ticket</span>
+            </button>
+          </section>
+        </section>
+      </article>
+      <article class="Wrapper Wrapper--valid">
+        <header class="customers-topbar">
+          <section></section>
+          <section class="customers-topbar__search search">
+            <h2>Cambio $<span class="js-change-field"></span></h2>
+          </section>
+          <section class="customers-topbar__buttons payment-topbar__buttons">
+            <button class="button is-success is-large js-new-order">
+              Nueva Orden
+            </button>
+          </section>
+        </header>
+        <section class="order-receipt">
+          <button class="button is-large order-receipt__button">
+            <i class="mdi mdi-printer"></i> Imprimir factura
+          </button>
+          <div class="order-receipt__file" id="order-receipt">
+            <style>
+              .order-receipt__file {
+                max-width: 300px;
+                font-size: 0.7em;
+                color: #000;
+              }
+              .order-receipt__file * {
+                color: inherit;
+              }
+              .company-logo {
+                display: block;
+                width: 100%;
+                height: auto;
+              }
+              .company-fig {
+                margin: -0.5em;
+                margin-bottom: 0;
+              }
+              .receipt__section {
+                border: solid 1px #000;
+                padding: 0.5em;
+                margin-bottom: 1em;
+              }
+              .receipt__company {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+              .order-receipt__file table {
+                display: block;
+              }
+              .order-receipt__file p {
+                text-align: center;
+              }
+              .order-receipt__file h3 {
+                font-size: 1em;
+              }
+            </style>
+            <div class="receipt__section">
+              <div class="company-fig">
+                <img class="company-logo" src="img/company-logo.png" alt="" />
+              </div>
+              <div class="receipt__company">
+                <h3>Demo Company</h3>
+                <p>
+                  L.DACRUZ SERVIS A & D S.R.L AV.METROPOLITANA - MZ J LT 42-B
+                  URB.TILDA
+                </p>
+              </div>
+            </div>
+            <div class="receipt__section">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Cliente:</td>
+                    <td class="js-receipt-customer"></td>
+                  </tr>
+                  <tr>
+                    <td>RUC/DNI:</td>
+                    <td class="js-receipt-id"></td>
+                  </tr>
+                  <tr>
+                    <td>Fecha:</td>
+                    <td class="js-receipt-date"></td>
+                  </tr>
+                  <tr>
+                    <td>Moneda:</td>
+                    <td class="js-receipt-currencie">Soles</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <script src="cube-fast/js/clusterize.min.js"></script>
+    <!-- jQuery Core -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Boostrap Validator -->
+    <script type="text/javascript" src="plugins/bower_components/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>
+    <!-- main script -->
+    <script src="./cube-fast/js/main.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="cube-fast/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="cube-fast/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="cube-fast/js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="cube-fast/js/custom.min.js"></script>
+    
+    <script src="cube-fast/js/print.min.js"></script>
+    
+    <!-- <script src="cube-fast/js/html2canvas.min.js"></script>
+    <script src="cube-fast/js/jspdf.min.js"></script> -->
+  </body>
+</html>
