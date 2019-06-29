@@ -206,6 +206,7 @@
     </div>
     <main class="Page-container" id="pointSaleContainer" data-impuesto="0.18">
       <article class="Wrapper Wrapper--products active">
+        <div class="viewport-camera"><span class="viewport-camera__sign">Codigo Leido</span></div>
         <section class="Wrapper-left">
           <article class="List">
             <h1 class="List-title has-text-dark">Lista de productos</h1>
@@ -298,6 +299,11 @@
           </article>
         </section>
         <section class="Wrapper-right">
+          <section class="toggle-edit">
+            <button class="button toggle-edit__btn js-toggle-btn">
+              <i class="mdi mdi-menu"></i>
+            </button>  
+          </section>
           <section class="Bar-code">
             <input
               class="input search__input js-bar-code-input"
@@ -741,6 +747,8 @@
     <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Boostrap Validator -->
     <script type="text/javascript" src="plugins/bower_components/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>
+    <!-- Barcode scanner QuaggaJS -->
+    <script src="./cube-fast/js/quagga.min.js"></script>
     <!-- main script -->
     <script src="./cube-fast/js/main.js"></script>
 

@@ -32,12 +32,55 @@ body {
     padding: 0.5rem;
   }
   &-right {
-    // height: 90%;
     grid-row: 1/2;
-    // background-color: salmon;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
+  }
+  @at-root .viewport-camera {
+    position: absolute;
+    top: 52px;
+    width: calc(100% - 2em);
+    z-index: 100;
+    display: none;
+    &.active {
+      display: block;
+    }
+    &__sign {
+      background-color: $danger;
+      border-radius: 50%;
+      color: white;
+      padding: 0.4em 0.8em;
+      position: absolute;
+      top: 1.5em;
+      right: 1.5em;
+      opacity: 0;
+      transition: all ease-in 0.25s;
+      &.active {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+  }
+  @media screen and (max-width: 680px) {
+    &--products {
+      position: relative;
+    }
+    &-right {
+      grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    &-left {
+      position: absolute;
+      background-color: $default;
+      z-index: 50;
+      transform: translate(-100%, 44px);
+      height: calc(100% - 44px);
+      transition: transform 0.4s ease-in-out;
+      &.active {
+        transform: translate(0%, 44px);
+      }
+    }
   }
 
   @media screen and (min-width: 680px) {
@@ -49,6 +92,10 @@ body {
     }
     &-left {
       grid-column: 1/2;
+    }
+
+    @at-root .toggle-edit {
+      display: none;
     }
   }
   @media screen and (min-width: 1024px) {
@@ -251,6 +298,9 @@ body {
   @at-root .Products-wrapper {
     margin: 0.5rem 0;
     grid-column: span 2;
+    @media screen and (max-width: 680px) {
+      grid-column: span 3;
+    }
   }
   @at-root .Bar-code {
     display: flex;

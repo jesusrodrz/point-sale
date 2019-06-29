@@ -5,8 +5,8 @@ const GlobalPayState = {
   validPayment: 0,
   change: 0,
   discount: 0,
-  subtotal:0,
-  taxes:0, // impuestos
+  subtotal: 0,
+  taxes: 0, // impuestos
   paymentMethods: [], //metodos de pagos
   edit: {
     discount: false
@@ -15,8 +15,8 @@ const GlobalPayState = {
 }
 
 //create the array that store all the products and their info
-  //creamos el array que contendrá toda la información de los prodcutos
-  let store = []
+//creamos el array que contendrá toda la información de los prodcutos
+let store = []
 ;(function(d, c) {
   // const d = document
   // const c = console.log
@@ -24,7 +24,6 @@ const GlobalPayState = {
   //otenemos el container principal para detectar todos los clicks y eventos para luego delegarlos
   const container = d.getElementById('pointSaleContainer')
 
-  
   let pays = []
   let editStateOptions = {
     active: false,
@@ -48,7 +47,6 @@ const GlobalPayState = {
 
   function SavePayment(objectData) {
     objectData.products = store
-    console.log(objectData)
     $.ajax({
       url: UrlComprobantePago,
       dataType: 'json',
@@ -75,33 +73,29 @@ const GlobalPayState = {
 
   window.addEventListener('keydown', e => {
     if (tabs.current === tabs.payment && paymentMethods.methods.length > 0) {
-      if (e.key === '.' || e.code.indexOf('Digit') !== -1 ) {
+      if (e.key === '.' || e.code.indexOf('Digit') !== -1) {
         setEditMethod(e.key)
-      } else if(e.code.indexOf('Numpad') !== -1) {
+      } else if (e.code.indexOf('Numpad') !== -1) {
         setEditMethod(e.code.replace('Numpad', ''))
       } else if (e.key === 'Backspace') {
         setEditMethod('delete')
       }
     }
   })
-  container.addEventListener('change',e =>{
+  container.addEventListener('change', e => {
     const cutomersSearch = e.target.closest('.js-search-customers')
     const productsSearch = e.target.closest('.js-search-products')
 
-    if(productsSearch){
+    if (productsSearch) {
       // c(productsSearch.value)
-      if(productsSearch.value === '') {
-        c('change')
+      if (productsSearch.value === '') {
         stateProducts.search = false
         updateProductsGrid(stateProducts.products, 'refresh')
       }
-    
-    } else if(cutomersSearch){
-      c(cutomersSearch.value)
+    } else if (cutomersSearch) {
       stateCustomers.search = false
       updateCustomersTable(stateCustomers.customers, 'refresh')
     }
-
   })
   container.addEventListener('click', e => {
     //get the event element target
@@ -220,7 +214,10 @@ const GlobalPayState = {
         type: 'question',
         confirmButtonText: 'Si',
         showCancelButton: true,
-        cancelButtonText: 'Cancelar'
+        cancelButtonText: 'Cancelar',
+        preConfirm: result => {
+          c(result)
+        }
       }).then(rel => {
         if (rel.value === true) {
           SavePayment(GlobalPayState)
@@ -274,10 +271,10 @@ const GlobalPayState = {
       '.js-button-customers-deselect'
     )
     const searchBtn = d.querySelector('.js-btn-customers')
-    
-    if(searchBtn) {
+
+    if (searchBtn) {
       const input = d.querySelector('.js-search-customers')
-      if(input.value !== ''){
+      if (input.value !== '') {
         searchCustomers(input.value)
       }
     }
@@ -292,7 +289,6 @@ const GlobalPayState = {
     if (buttonDeselectCustomer) {
       setCustomer('unset')
     }
-
   }
 
   // handle the buttons in the edit panel
@@ -319,7 +315,6 @@ const GlobalPayState = {
             autocorrect: 'off'
           }
         }).then(rel => {
-          c(rel)
           setEditState(null, type)
         })
       } else if (type === 'price') {
@@ -369,44 +364,78 @@ const GlobalPayState = {
     }
   }
 
-  function searchProducts(input){
-
-    fetch(`data/products.${input}.json`).then(response => response.json()).
-    then(text => {
-      stateProducts.search = true
-      updateProductsGrid(text.data, 'search')
+  function searchProducts(input) {
+    const page = 0
+    $.ajax({
+      url: UrlListProducts + '?page=' + page,
+      type: 'POST',
+      data: {
+        codigoNombre: input
+      }
+    }).done(function(data) {
+      switch (data.accion) {
+        case 'success':
+          updateProductsGrid(data.Lista, 'search')
+          stateProducts.search = true
+          break
+        case 'error':
+          swal({
+            title: 'Error de operaci\u00f3n',
+            text: data.Msj,
+            type: 'error'
+          })
+          stateProducts.fetching = false
+          break
+      }
     })
   }
-  function searchCustomers(input){
-
-    fetch(`data/customers.${input}.json`).then(response => response.json()).
-    then(text => {
-      stateCustomers.search = true
-      updateCustomersTable(text.data, 'search')
+  function searchCustomers(input) {
+    fetch(`data/customers.${input}.json`)
+      .then(response => response.json())
+      .then(text => {
+        stateCustomers.search = true
+        updateCustomersTable(text.data, 'search')
+      })
+  }
+  function loadProductBarCode(barcode) {
+    c('barcode: ' + barcode)
+    $.ajax({
+      url: UrlBuscarArticuloCodBarra + '?codBarra=' + barcode,
+      type: 'GET'
+    }).done(function(data) {
+      switch (data.accion) {
+        case 'success':
+          addProductBarCode(data.articulo)
+          break
+        case 'error':
+          swal({
+            title: 'Error de operaci\u00f3n',
+            text: data.Msj,
+            type: 'error'
+          })
+          break
+      }
     })
   }
-  function loadProductBarCode(barcode){
-    
-    c('barcode: '+ barcode)
-    // addProductBarCode(ProductObject)
-  }
-  function addProductBarCode(productObj){
-    
+  function addProductBarCode(productObj) {
     const product = {
       name: productObj.nombre,
       price: productObj.PrecioVenta,
       unit: 1,
-      pay: productObj.MontoDescuento ? productObj.MontoDescuento : productObj.PrecioVenta,
+      pay: productObj.MontoDescuento
+        ? productObj.MontoDescuento
+        : productObj.PrecioVenta,
       element: null,
       isDiscount: productObj.MontoDescuento ? true : false,
       discountPrice: productObj.MontoDescuento,
       discount: productObj.MontoDescuento
-      ? Math.round(
-          ((Number(productObj.PrecioVenta) - Number(productObj.MontoDescuento)) *
-            100) /
-            productObj.PrecioVenta
-        )
-      : 0,
+        ? Math.round(
+            ((Number(productObj.PrecioVenta) -
+              Number(productObj.MontoDescuento)) *
+              100) /
+              productObj.PrecioVenta
+          )
+        : 0,
       id: productObj.id_articulo,
       edit: {
         unit: false,
@@ -417,23 +446,91 @@ const GlobalPayState = {
 
     addProductsStore(product)
   }
-  function setBarCodeReader(btn){
+  function setBarCodeReader(btn) {
     const input = d.querySelector('.js-bar-code-input')
+    const viewport = d.querySelector('.viewport-camera')
 
-    if(!this.state) {
+    const type = 'camera'
+
+    function setQuagga(action) {
+      // if(!this.quagga)
+      if (action === 'close') {
+        Quagga.stop()
+        viewport.classList.remove('active')
+        return
+      }
+      // c('ok')
+      viewport.classList.add('active')
+      Quagga.init(
+        {
+          inputStream: {
+            name: 'Live',
+            type: 'LiveStream',
+            target: viewport // Or '#yourElement' (optional)
+          },
+          decoder: {
+            readers: ['code_128_reader']
+          }
+        },
+        function(err) {
+          if (err) {
+            console.log(err)
+            return
+          }
+          console.log('Initialization finished. Ready to start')
+          Quagga.start()
+        }
+      )
+
+      Quagga.onDetected(codeHandler)
+      // Quagga.onProcessed(codeHandler)
+
+      function codeHandler(data) {
+        if (!this.ready) {
+          this.ready = true
+          setTimeout(() => {
+            this.ready = false
+          }, 1000)
+        } else {
+          return
+        }
+
+        loadProductBarCode(data.codeResult.code)
+        // c(data)
+
+        const sing = viewport.querySelector('span')
+
+        sing.classList.add('active')
+
+        sing.addEventListener('transitionend', function animation() {
+          sing.classList.remove('active')
+          sing.removeEventListener('animationend', animation)
+        })
+      }
+    }
+
+    if (!this.state) {
       this.state = true
       btn.classList.add('is-active')
-      input.addEventListener('keydown', readCode)
-      input.focus()
-    } else{
-      input.removeEventListener('keydown', readCode)
-      btn.classList.remove('is-active')
-      input.blur()
+      if (type === 'camera') {
+        setQuagga()
+      } else {
+        input.addEventListener('keydown', readCode)
+        input.focus()
+      }
+    } else {
       this.state = false
+      btn.classList.remove('is-active')
+      if (type === 'camera') {
+        setQuagga('close')
+      } else {
+        input.removeEventListener('keydown', readCode)
+        input.blur()
+      }
     }
 
     function readCode(event) {
-      if(event.key === 'Enter') {
+      if (event.key === 'Enter') {
         loadProductBarCode(input.value)
         input.value = ''
       }
@@ -445,13 +542,20 @@ const GlobalPayState = {
   function productGridHandler(target) {
     const barCodeBtn = target.closest('.js-bar-code-btn')
     const searchBtn = target.closest('.js-btn-products')
+    const toggleEdit = target.closest('.js-toggle-btn')
+    if (toggleEdit) {
+      const editPanel = d.querySelector('.Wrapper-left')
 
-    if(barCodeBtn){
+      editPanel.classList.toggle('active')
+      toggleEdit.querySelector('i').classList.toggle('mdi-close')
+      toggleEdit.querySelector('i').classList.toggle('mdi-menu')
+    }
+    if (barCodeBtn) {
       setBarCodeReader(barCodeBtn)
     }
-    if(searchBtn) {
+    if (searchBtn) {
       const input = d.querySelector('.js-search-products')
-      if(input.value !== ''){
+      if (input.value !== '') {
         searchProducts(input.value)
       }
     }
@@ -493,11 +597,9 @@ const GlobalPayState = {
   //add and update the product store
   //agraga y actualiza el store
   function addProductsStore(product) {
-    
     const productExists = store.find(
       productInStore => productInStore.name === product.name
     )
-    c(product,productExists)
 
     //if the product exists update the unit and pay price
     // si el producto existe actualiza la unidad y el precio a pagar
@@ -509,7 +611,6 @@ const GlobalPayState = {
           ).toFixed(2)
         : (Number(productExists.price) * Number(productExists.unit)).toFixed(2)
 
-      c(productExists.pay, productExists.discountPrice)
       modifyViewProduct(productExists)
       product = productExists
     } else {
@@ -588,9 +689,7 @@ const GlobalPayState = {
   function deleteProduct(productElement) {
     //create a new array without the product to delete
     //creamos un nuevo array sin el producto a borrar
-    c(store)
     store = store.filter(product => product.element !== productElement)
-    c(store)
     //remove the dom element
     //removemos el elemento del dom
     productElement.remove()
@@ -608,7 +707,14 @@ const GlobalPayState = {
     let discount = false
     let totalPayment = 0
     store.map(productInStore => (payment += Number(productInStore.pay)))
-    const taxes = parseFloat((payment * Number(d.querySelector('#pointSaleContainer').getAttribute('data-impuesto'))).toFixed(2))
+    const taxes = parseFloat(
+      (
+        payment *
+        Number(
+          d.querySelector('#pointSaleContainer').getAttribute('data-impuesto')
+        )
+      ).toFixed(2)
+    )
 
     //payment sing in payment tab
     const paymentSing = d.querySelector('.js-payment-sing')
@@ -795,14 +901,12 @@ const GlobalPayState = {
       }
     }
     if (editStateOptions.type === 'discount') {
-      c('discount')
       if (action === 'num') {
         if (
           (Number(value) === 0 || value === '.') &&
           GlobalPayState.discount.toString().length === 1 &&
           !GlobalPayState.edit.discount
         ) {
-          c('retunr')
           return
         }
 
@@ -810,7 +914,6 @@ const GlobalPayState = {
           GlobalPayState.edit.discount && GlobalPayState.discount !== 0
             ? GlobalPayState.discount.toString() + value
             : value
-        c(discount)
         GlobalPayState.edit.discount = discount === '0' ? false : true
         GlobalPayState.discount = discount
         printPayment()
@@ -826,7 +929,6 @@ const GlobalPayState = {
               )
             : ''
 
-        c(discount)
         GlobalPayState.discount = discount
 
         printPayment()
@@ -968,7 +1070,6 @@ const GlobalPayState = {
     function isElement(element) {
       return element instanceof Element || element instanceof HTMLDocument
     }
-    c(isElement(param))
 
     const customer = !isElement(param) ? param : getCustomerData(param)
 
@@ -1006,10 +1107,8 @@ const GlobalPayState = {
       selected: true
     }
 
-    
     paymentMethods.methods.push(method)
     GlobalPayState.paymentMethods = paymentMethods.methods
-    c(GlobalPayState)
     setPaymentMethod(method)
     togglePaymentMethodTap('active')
   }
@@ -1101,14 +1200,12 @@ const GlobalPayState = {
 
   function setPaymentValid(action) {
     const btn = d.querySelector('.js-valid-btn')
-    c(paymentMethods.due, paymentMethods.due <= 0)
     if (
       action &&
       GlobalPayState.ticketType &&
       GlobalPayState.payment > 0 &&
-      GlobalPayState.customer && 
+      GlobalPayState.customer &&
       paymentMethods.due <= 0
-
     ) {
       GlobalPayState.validPayment = true
       btn.removeAttribute('disabled')
@@ -1357,7 +1454,8 @@ const clusterizeProducts = new Clusterize({
     scrollingProgress: progress => {
       if (
         stateProducts.currentPage <= stateProducts.pages &&
-        progress.toFixed(2) > 60 && !stateProducts.search
+        progress.toFixed(2) > 60 &&
+        !stateProducts.search
       ) {
         loadProducts(stateProducts.currentPage)
       }
@@ -1372,7 +1470,8 @@ const clusterizeCustomers = new Clusterize({
     scrollingProgress: progress => {
       if (
         stateCustomers.currentPage <= stateCustomers.pages &&
-        progress.toFixed(2) > 60 && !stateCustomers.search
+        progress.toFixed(2) > 60 &&
+        !stateCustomers.search
       ) {
         loadCustomers(stateCustomers.currentPage)
       }
@@ -1381,7 +1480,7 @@ const clusterizeCustomers = new Clusterize({
 })
 
 function updateCustomersTable(customers, action = null) {
-  if(action !== 'refresh') {
+  if (action !== 'refresh') {
     stateCustomers.customers = stateCustomers.customers.concat(customers)
   }
 
@@ -1410,7 +1509,7 @@ function updateCustomersTable(customers, action = null) {
     return tr
   })
 
-  if(action === 'search'){
+  if (action === 'search') {
     clusterizeCustomers.update(customersHTML)
     return
   } else if (action === 'refresh') {
@@ -1420,12 +1519,9 @@ function updateCustomersTable(customers, action = null) {
   clusterizeCustomers.append(customersHTML)
 }
 function updateProductsGrid(products, action = null) {
-  console.log(action)
-  if(action !== 'refresh') {
-
+  if (action !== 'refresh') {
     stateProducts.products = stateProducts.products.concat(products)
   }
-
 
   const productsHTML = products.map(product => {
     const discountPercentage = product.MontoDescuento
@@ -1502,12 +1598,10 @@ function updateProductsGrid(products, action = null) {
     )
   }
 
-
-  if (action === 'search'){
+  if (action === 'search') {
     clusterizeProducts.update(productRows)
     return
-  } else if(action === 'refresh'){
-
+  } else if (action === 'refresh') {
     clusterizeProducts.update(productRows)
     return
   }
@@ -1540,7 +1634,6 @@ function loadProducts(index) {
       })
       .catch(err => {
         // Error
-        console.log(err)
         stateProducts.fetching = false
       })
   }
@@ -1548,7 +1641,6 @@ function loadProducts(index) {
 
 function loadCustomers(index) {
   stateCustomers.pages = 3
-  console.log('ok')
   if (!stateCustomers.fetching) {
     stateCustomers.fetching = true
 
@@ -1557,10 +1649,8 @@ function loadCustomers(index) {
         if (!response.ok) {
           throw Error(response.statusText)
         }
-        console.log(stateCustomers.currentPage, stateCustomers.pages)
         stateCustomers.fetching = false
         stateCustomers.currentPage++
-        console.log(stateCustomers.currentPage, stateCustomers.pages)
 
         return response.json()
       })
