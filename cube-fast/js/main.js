@@ -495,7 +495,6 @@ let store = []
           return
         }
 
-        loadProductBarCode(data.codeResult.code)
         // c(data)
 
         const sing = viewport.querySelector('span')
@@ -506,6 +505,8 @@ let store = []
           sing.classList.remove('active')
           sing.removeEventListener('animationend', animation)
         })
+        
+        loadProductBarCode(data.codeResult.code)
       }
     }
 
