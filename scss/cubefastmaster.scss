@@ -67,7 +67,7 @@ body {
       position: relative;
     }
     &-right {
-      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-columns: repeat(2,1fr) 4fr;
     }
 
     &-left {
@@ -312,7 +312,7 @@ body {
     &__button {
       border-color: #4a4a4a;
       color: #363636;
-
+      margin-right: 1em;
       &.is-active,
       &.is-active:hover {
         background-color: $danger;
@@ -322,6 +322,13 @@ body {
       &:hover {
         color: white;
         background-color: #4a4a4a;
+      }
+    }
+    &__text {
+      margin-left: 0.5em;
+      display: inline-block;
+      @media screen and (max-width: 680px) {
+        display: none;
       }
     }
   }

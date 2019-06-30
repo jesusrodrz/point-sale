@@ -448,10 +448,31 @@ let store = []
   }
   function setBarCodeReader(btn) {
     const input = d.querySelector('.js-bar-code-input')
+
+    if (!this.state) {
+      this.state = true
+      btn.classList.add('is-active')
+      
+      input.addEventListener('keydown', readCode)
+      input.focus()
+      
+    } else {
+      this.state = false
+      btn.classList.remove('is-active')
+      input.removeEventListener('keydown', readCode)
+      input.blur()
+      
+    }
+
+    function readCode(event) {
+      if (event.key === 'Enter') {
+        loadProductBarCode(input.value)
+        input.value = ''
+      }
+    }
+  }
+  function setBarCodeCamera(btn){
     const viewport = d.querySelector('.viewport-camera')
-
-    const type = 'camera'
-
     function setQuagga(action) {
       // if(!this.quagga)
       if (action === 'close') {
@@ -495,6 +516,7 @@ let store = []
           return
         }
 
+        loadProductBarCode(data.codeResult.code)
         // c(data)
 
         const sing = viewport.querySelector('span')
@@ -505,36 +527,18 @@ let store = []
           sing.classList.remove('active')
           sing.removeEventListener('animationend', animation)
         })
-        
-        loadProductBarCode(data.codeResult.code)
       }
     }
 
     if (!this.state) {
       this.state = true
       btn.classList.add('is-active')
-      if (type === 'camera') {
-        setQuagga()
-      } else {
-        input.addEventListener('keydown', readCode)
-        input.focus()
-      }
+      setQuagga()
+     
     } else {
       this.state = false
       btn.classList.remove('is-active')
-      if (type === 'camera') {
-        setQuagga('close')
-      } else {
-        input.removeEventListener('keydown', readCode)
-        input.blur()
-      }
-    }
-
-    function readCode(event) {
-      if (event.key === 'Enter') {
-        loadProductBarCode(input.value)
-        input.value = ''
-      }
+      setQuagga('close')
     }
   }
 
@@ -542,6 +546,7 @@ let store = []
   //esta función maneja todos los clicks en el grid de productos
   function productGridHandler(target) {
     const barCodeBtn = target.closest('.js-bar-code-btn')
+    const barCameraBtn = target.closest('.js-bar-camera-btn')
     const searchBtn = target.closest('.js-btn-products')
     const toggleEdit = target.closest('.js-toggle-btn')
     if (toggleEdit) {
@@ -553,6 +558,9 @@ let store = []
     }
     if (barCodeBtn) {
       setBarCodeReader(barCodeBtn)
+    }
+    if(barCameraBtn){
+      setBarCodeCamera(barCameraBtn)
     }
     if (searchBtn) {
       const input = d.querySelector('.js-search-products')
