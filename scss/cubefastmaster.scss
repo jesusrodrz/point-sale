@@ -62,12 +62,12 @@ body {
       }
     }
   }
+  &--products {
+    position: relative;
+  }
   @media screen and (max-width: 680px) {
-    &--products {
-      position: relative;
-    }
     &-right {
-      grid-template-columns: repeat(2,1fr) 4fr;
+      grid-template-columns: repeat(2, 1fr) 4fr;
     }
 
     &-left {
